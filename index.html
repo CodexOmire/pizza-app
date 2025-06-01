@@ -1,15 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/src/style.css">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <h1>Les</h1>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <title>Pizza App</title>
+
+    <!-- Google Fonts for a pizza-friendly vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-quicksand bg-gray-100 text-gray-800">
+
+    
+    <nav class="bg-red-600 shadow-lg">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+
+                
+                <div class="flex items-center justify-start">
+                    <img class="h-12 w-auto" src="/public/pizza-svgrepo-com.svg" alt="Pizza App" />
+                    <span class="text-3xl font-pacifico text-white ml-2">Pizza Kai</span>
+                </div>
+
+                
+                <div class="hidden sm:flex sm:ml-auto sm:space-x-4">
+                    <a href="#" class="rounded-md bg-red-500 px-3 py-2 text-sm font-medium text-white hover:bg-red-700 transition duration-200">Home</a>
+                    <a href="#about" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-red-700 transition duration-200">About</a>
+                    <a href="#menu" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-red-700 transition duration-200">Menu</a>
+                    <a href="#contact" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-red-700 transition duration-200">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div id="hero-section-photo" class="relative bg-cover bg-center" style="background-image: url('/public/pizza-2589569_1280.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                <div class="text-center text-white">
+                    <h1 class="text-6xl font-pacifico tracking-tight sm:text-7xl">Pizza Kai</h1>
+                    <p class="mt-4 text-lg sm:text-xl">Delicious, hot, and fresh pizzas delivered right to your door!</p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href="#menu" class="rounded-md bg-yellow-500 px-6 py-3 text-lg font-semibold text-white shadow-md hover:bg-yellow-400 transition duration-200">View Menu</a>
+                        <a href="#order" class="rounded-md border-2 border-yellow-500 px-6 py-3 text-lg font-semibold text-yellow-500 hover:bg-yellow-500 hover:text-white transition duration-200">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <section id="about" class="py-16 bg-yellow-100 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-semibold text-red-600 mb-4">About Us</h2>
+            <p class="text-lg text-gray-700">At Pizza Kai, we bring joy to your taste buds with every slice. Since 2010, we have been committed to providing delicious pizzas with fresh ingredients. Join us in savoring every cheesy bite!</p>
+        </div>
+    </section>
+
+    
+    <section id="menu" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-semibold text-red-600 mb-12">Our Menu</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform transition duration-200 hover:scale-105 hover:shadow-xl">
+                    <img src="/public/Margherita Pizza.jpg" alt="Margherita Pizza" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-xl font-semibold mt-4">Margherita Pizza</h3>
+                    <p class="text-gray-600">Classic Margherita with fresh mozzarella, basil, and tomato sauce.</p>
+                    <p class="text-xl font-bold mt-2">$12.99</p>
+                    <p class="text-sm text-yellow-500 mt-1">⭐⭐⭐⭐⭐ (500 reviews)</p>
+                    <a href="#order" class="mt-4 inline-block px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-200">Order Now</a>
+                </div>
+
+               
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform transition duration-200 hover:scale-105 hover:shadow-xl">
+                    <img src="/public/Pepperoni Pizza.jpg" alt="Pepperoni Pizza" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-xl font-semibold mt-4">Pepperoni Pizza</h3>
+                    <p class="text-gray-600">Loaded with pepperoni, mozzarella, and a rich tomato base.</p>
+                    <p class="text-xl font-bold mt-2">$14.99</p>
+                    <p class="text-sm text-yellow-500 mt-1">⭐⭐⭐⭐ (450 reviews)</p>
+                    <a href="#order" class="mt-4 inline-block px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-200">Order Now</a>
+                </div>
+
+               
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform transition duration-200 hover:scale-105 hover:shadow-xl">
+                    <img src="/public/Veggie Pizza.jpg" alt="Veggie Pizza" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-xl font-semibold mt-4">Veggie Pizza</h3>
+                    <p class="text-gray-600">A delicious combination of bell peppers, olives, onions, and mushrooms.</p>
+                    <p class="text-xl font-bold mt-2">$13.99</p>
+                    <p class="text-sm text-yellow-500 mt-1">⭐⭐⭐⭐ (400 reviews)</p>
+                    <a href="#order" class="mt-4 inline-block px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-200">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="py-16 bg-yellow-100 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-semibold text-red-600 mb-4">Contact Us</h2>
+            <p class="text-lg text-gray-700 mb-8">Got a question? Reach out to us and we’ll get back to you as soon as possible!</p>
+            <form action="#" method="POST" class="space-y-6">
+                <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border-2 border-gray-300 rounded-md">
+                <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border-2 border-gray-300 rounded-md">
+                <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-3 border-2 border-gray-300 rounded-md"></textarea>
+                <button type="submit" class="px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-200">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    
+    <footer class="bg-red-600 py-8 text-center text-white">
+        <p>&copy; 2025 Pizza Kai. All rights reserved.</p>
+        <div class="mt-4">
+            <a href="#" class="text-white hover:text-gray-300">Privacy Policy</a> |
+            <a href="#" class="text-white hover:text-gray-300">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+
 </html>
